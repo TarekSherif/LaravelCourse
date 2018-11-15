@@ -4,10 +4,9 @@ RTC11-11-2018
 <h1>
 web developer
 </h1>
-<h2> Course
- LayOut</h2>
-<ol>
+<h2> Course LayOut</h2>
 
+<ol>
 <li>Client/Server Architecture</li>
 <li>What is Laravel </li>
 <li>Install  Apache, Mysql, Composer, Node.js , laravel  , git on windows</li>
