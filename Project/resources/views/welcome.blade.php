@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    RTC GIZA Laravel
+                    hi RTC GIZA Laravel
                 </div>
 
                 <div class="links">
