@@ -46,9 +46,9 @@
 // Route::view('/welcome', 'welcome');
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('index/{id}', function ($id) {
     return "<h1>$id</h1>";
