@@ -39,14 +39,13 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '107.180.50.226'),
+            'host' =>'107.180.50.226',
             'port' => env('DB_PORT', '3306'),
-            'database' =>  env('DB_DATABASE','RTCGiza'),
-            'username' =>  env('DB_USERNAME','RTCGiza'),
-            'password' =>  env('DB_PASSWORD','1OeSMR3E=Qj-'),
+            'database' =>  'RTCGiza',
+            'username' =>  'RTCGiza',
+            'password' =>  '1OeSMR3E=Qj-',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -55,6 +54,22 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+
+        // 'mysql' => [
+        //     'driver' => 'mysql',
+        //     'host' => env('DB_HOST', '107.180.50.226'),
+        //     'port' => env('DB_PORT', '3306'),
+        //     'database' =>  env('DB_DATABASE','RTCGiza'),
+        //     'username' =>  env('DB_USERNAME','RTCGiza'),
+        //     'password' =>  env('DB_PASSWORD','1OeSMR3E=Qj-'),
+        //     'unix_socket' => env('DB_SOCKET', ''),
+        //     'charset' => 'utf8mb4',
+        //     'collation' => 'utf8mb4_unicode_ci',
+        //     'prefix' => '',
+        //     'prefix_indexes' => true,
+        //     'strict' => true,
+        //     'engine' => null,
+        // ],
 
         // 'mysql' => [
         //     'driver' => 'mysql',
