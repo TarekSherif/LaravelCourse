@@ -11,6 +11,46 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// Route::get('index', function () {
+//     return '<h1>Hello World</h1>';
+// });
+
+
+
+
+// // Available Router Methods
+
+// Route::get($uri, $callback);
+// Route::post($uri, $callback);
+// Route::put($uri, $callback);
+// Route::patch($uri, $callback);
+// Route::delete($uri, $callback);
+// Route::options($uri, $callback);
+
+
+
+// Route::match(['get', 'post'], '/', function () {
+//     //
+// });
+
+// Route::any('foo', function () {
+//     //
+// });
+
+
+
+
+// View Routes
+
+// Route::view('/welcome', 'welcome');
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('index/{id}', function ($id) {
+    return "<h1>$id</h1>";
 });
+
