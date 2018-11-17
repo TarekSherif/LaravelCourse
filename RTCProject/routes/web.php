@@ -54,3 +54,7 @@ Route::get('index/{id}', function ($id) {
     return "<h1>$id</h1>";
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
