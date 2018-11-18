@@ -41,7 +41,7 @@ return [
         ],
         'mysql' => [
             'driver' => 'mysql',
-            'host' =>'107.180.50.226',
+            'host' =>'localhost',
             'port' => env('DB_PORT', '3306'),
             'database' =>  'RTCGiza',
             'username' =>  'RTCGiza',

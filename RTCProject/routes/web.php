@@ -11,10 +11,18 @@
 |
 */
 
+// Auth::routes();
 
-// Route::get('index', function () {
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('index/{Name?}', function ($Name="") {
+    return "<h1>Hello $Name</h1>";
+});
+// Route::get('/', function () {
 //     return '<h1>Hello World</h1>';
 // });
+
 
 
 
@@ -42,19 +50,19 @@
 
 
 // View Routes
-
-// Route::view('/welcome', 'welcome');
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('index/{id}', function ($id) {
-    return "<h1>$id</h1>";
-});
+Route::get("frist",function(){
+$data= array('X' => "test" );
+    return view("fristView",$data);
+    });
+    // Route::view('frist', 'fristView');
+//  Route::view('/welcome', 'welcome',;
 
 
-Auth::routes();
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('index/{id}', function ($id) {
+//     return "<h1>$id</h1>";
+// });
+
