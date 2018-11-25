@@ -16,16 +16,20 @@
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('index/{Name?}', function ($Name="") {
-    return "<h1>Hello $Name</h1>";
-});
-// Route::get('/', function () {
-//     return '<h1>Hello World</h1>';
-// });
+
+Route::view('/', 'welcome');
 
 
+// Lec1
+//===================
+//===================
 
-
+// BasicRouting
+Route::get('BasicRouting','Lec1Controller@BasicRouting');
+// BasicRouting With Required Parameters
+Route::get('BasicRoutingWithRequiredParameters/{Name}', 'Lec1Controller@BasicRoutingWithRequiredParameters' ); 
+// BasicRouting With Optional  Parameters
+Route::get('BasicRoutingWithOptionalParameters/{Name?}', 'Lec1Controller@BasicRoutingWithOptionalParameters' );
 
 // // Available Router Methods
 
@@ -36,8 +40,6 @@ Route::get('index/{Name?}', function ($Name="") {
 // Route::delete($uri, $callback);
 // Route::options($uri, $callback);
 
-
-
 // Route::match(['get', 'post'], '/', function () {
 //     //
 // });
@@ -47,22 +49,24 @@ Route::get('index/{Name?}', function ($Name="") {
 // });
 
 
+// Lec2
+//===================
+//===================
+// View Routing
+Route::view('ViewRouting', 'Lec2.ViewRouting');
+// View Routing With PassData
+Route::get("ViewRoutingWithPassData","Lec2Controller@ViewRoutingWithPassData");
+// View Routing With PassData
+Route::get("ViewRoutingWithPassRequestData/{Name?}","Lec2Controller@ViewRoutingWithPassRequestData");
+// BladeSyntax
+Route::get("BladeSyntax/{Name?}","Lec2Controller@BladeSyntax");
+    
+// Lec3
+//===================
+//===================
+Route::get('ShowForm', 'Lec3Controller@ShowForm');
+Route::post('ViewData', 'Lec3Controller@ViewData');
 
 
-// View Routes
-Route::get("frist",function(){
-$data= array('X' => "test" );
-    return view("fristView",$data);
-    });
-    // Route::view('frist', 'fristView');
-//  Route::view('/welcome', 'welcome',;
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('index/{id}', function ($id) {
-//     return "<h1>$id</h1>";
-// });
 
