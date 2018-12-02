@@ -11,9 +11,71 @@ class Lec3Controller extends Controller
     {
        return view("Lec3.ViewShowForm");
     }
-    public function ViewData()
+    public function ViewData(Request $request)
     {
-     print_r($_POST);
+        // requestObject
+        //==================
+
+        // if ($request->has('_token')) {
+        //     echo "true";
+
+        // }
+        // else {
+        //     echo "false";
+        // }
+    //  echo $request->input('_token', 'RTC');
+    // if (isset($_POST["asdasdas"])) {
+    //     echo  $_POST["asdasdas"] ;
+    //  }
+    //  else {
+    //     echo    'RTC';
+    //  }
+
+    //  echo $request->input('asdasdas', 'RTC');
+//   print_r( $request->input('*userName'));
+
+$request->validate([
+    'userName' => 'required | min:5',
+    'Password' => 'required',
+    ]);
+   
+
+echo "Insert";
+
+
+     
     }
+
+
+
+
+    // public function store(Request $request)
+    // {
+    //    $this->validate($request,
+    //        [
+    //            'txtUser' => 'required',
+    //            'txtPass' => 'required',
+    //        ],
+    //        [
+    //            'required'=> ':attribute field is required',
+    //        ],
+    //        [
+    //            'txtUser'=>'Username',
+    //            'txtPass'=>'Password',
+    //        ]);
+    // /* <!-- /resources/views/post/create.blade.php -->
+    //          <h1>Create Post</h1>
+    //         @if (errors->any())
+    //             <div class='alert alert-danger'>
+    //                 <ul>
+    //                     @foreach (errors->all() as error)
+    //                         <li>{{ error }}</li>
+    //                     @endforeach
+    //                 </ul>
+    //             </div>
+    //         @endif
+    // <!-- Create Post Form --> */
+    // }
+
 
 }

@@ -88,6 +88,10 @@
                     <a href="http://rtc-giza.cairo2help.com/">OnlineLink</a>
                     <a href="https://www.facebook.com/RTCHaram/">FaceBook</a>
                     <a href="https://github.com/TarekSherif/LaravelCourse">GitHub</a>
+                <a href="{{url('/')}}/Car">Show Cars</a>
+                    <a href="{{url('/')}}/Car/create">create car</a>
+
+                   
                 </div>
             </div>
         </div>

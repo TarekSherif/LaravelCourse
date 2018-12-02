@@ -8,10 +8,23 @@
 </head>
 <body>
     <form action="ViewData" method="POST">
-        <input type="text"   name="userName" placeholder="userName"><br>
-        <input type="Password"   name="Password" placeholder="Password">
+        @csrf
+        <input type="text"   name="userName" placeholder="" value="{{old('userName')}}"><br>
+        <input type="text"   name="userName1" placeholder="" value="{{old('userName1')}}"><br>
+        <input type="text"   name="userName2" placeholder="" value="{{old('userName2')}}"><br>
+        <input type="Password"   name="Password" placeholder="" value="{{old('Password')}}">
+
         <input type="submit" value="LOgin">
     </form>
+    <SCript>
+            var errorMess ="";
+    @foreach ($errors->all() as $error)
+
+        errorMess =errorMess + "{{$error}}";
+    @endforeach
+   
+            alert(errorMess);
+ </SCript>
 
 </body>
 </html>

@@ -67,6 +67,11 @@ Route::get("BladeSyntax/{Name?}","Lec2Controller@BladeSyntax");
 Route::get('ShowForm', 'Lec3Controller@ShowForm');
 Route::post('ViewData', 'Lec3Controller@ViewData');
 
+Route::resource('Car','CarController');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
