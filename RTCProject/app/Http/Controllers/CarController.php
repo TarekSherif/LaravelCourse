@@ -104,8 +104,11 @@ class CarController extends Controller
      * @param  \App\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Car $car)
+    public function destroy(Car $car,$id)
     {
         //
+       
+        DB::delete('DELETE FROM `Cars` WHERE id= ?', [$id]);
+        return redirect("Car");
     }
 }
