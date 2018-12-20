@@ -68,6 +68,7 @@ Route::get('ShowForm', 'Lec3Controller@ShowForm');
 Route::post('ViewData', 'Lec3Controller@ViewData');
 
 Route::resource('Car','CarController');
+Route::resource('test','TestController');
 
 
 
