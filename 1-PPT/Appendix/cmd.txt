@@ -1,0 +1,8 @@
+dir
+cls
+exit
+cd
+start
+start .
+tree
+cd ..

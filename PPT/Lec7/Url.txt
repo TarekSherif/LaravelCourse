@@ -1,3 +1,0 @@
-http://api.jqueryui.com/autocomplete/
-
-https://github.com/lindell/JsBarcode

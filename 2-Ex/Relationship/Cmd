@@ -1,0 +1,13 @@
+
+php artisan make:Auth
+
+php artisan make:model -mcr Models/Profile
+php artisan make:model -mcr Models/Post
+php artisan make:model -mcr Models/Product
+
+
+php artisan make:migration createUserProductTable
+
+
+
+php artisan migrate
