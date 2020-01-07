@@ -1,0 +1,20 @@
+php composer-setup.php --install-dir=bin --filename=composer
+composer -V
+php composer install
+php composer update
+composer dump-autoload
+composer.json
+vendor folder
+=================================
+
+install Node.js
+
+npm install
+npm update
+
+package.json
+
+node_modules folder
+
+
+
