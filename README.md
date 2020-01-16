@@ -7,13 +7,13 @@ RTC11-11-2018
 ## Course Layout
 
 - Introduction
-- Route
-- View ,Controller , Layouts
-- Request , Validation
-- Authentication ,DB Class (CRUD)
+- Route, Controller
+- View, Layouts
+- Request, Validation
+- Authentication, DB Class (CRUD)
 - Migration
 - Model (CRUD)
-- Seed , Factory
+- Seed, Factory
 - Collections
 - Session & Cookies
 - Middleware
@@ -45,7 +45,7 @@ RTC11-11-2018
     # If you don't already have php installed:
     > https://www.php.net/
 
-## Nodejs
+## mysql
 
     # If you don't already have mysql installed:
     > https://www.mysql.com/
@@ -186,8 +186,147 @@ To learn more about Regular Expression : `https://regexr.com/`
 
 ---
 
-# lecture 3 View Blade syntax
+### RESTful Resource Controllers
+
+    # To Creating a Controller Write in cmd
+      > 	php artisan make:controller EmpController
+
+```php
+Route::resource('emps', 'EmpController');
+```
+
++-----------+-----------------+---------+-------------+
+| Verb | Path | Action | Route Name |
++-----------+-----------------+---------+-------------+
+| GET | /emp | index | emp.index |
++-----------+-----------------+---------+-------------+
+| GET | /emp/create | create | emp.create |
++-----------+-----------------+---------+-------------+
+| POST | /emp | store | emp.store |
++-----------+-----------------+---------+-------------+
+| GET | /emp/{emp} | show | emp.show |
++-----------+-----------------+---------+-------------+
+| GET | /emp/{emp}/edit | edit | emp.edit |
++-----------+-----------------+---------+-------------+
+| PUT/PATCH | /emp/{emp} | update | emp.update |
++-----------+-----------------+---------+-------------+
+| DELETE | /emp/{emp} | destroy | emp.destroy |
++-----------+-----------------+---------+-------------+
+
+### API Resource Routes
+
+    # To Creating a Controller Write in cmd
+      > 	php artisan make:controller EmpController --api
+
+```php
+Route::apiResource('emps', 'EmpController');
+OR
+Route::apiResources([
+    'emps' => 'EmpController',
+    'posts' => 'PostController'
+]);
+```
 
 ---
 
-# lecture 4 Routes
+# lecture 3 View Blade syntax
+
+## Blade syntax - Basic output
+
+```php
+// Displaying
+{{ $x }} - Echo content
+{!! $x !!} - Echo content without escaping special characters
+{{ $x or 'default' }} - Echo content with a default value
+
+// Comments
+ {{-- This comment will not be present in the rendered HTML --}}
+
+// PHP
+@php...@endphp
+<?php  ?>
+```
+
+## Blade syntax - Path Control
+
+```php
+// If Statements
+@if, @elseif, @else and @endif
+@unless, @endunless
+
+// Loops
+@for...@endfor
+@foreach...@endforeach
+@forelse...@empty...@endforelse
+@while...@endwhile
+@continue, @continue($user->type==1)
+@break, $break($user->type==1)
+$loop - index, iteration, remaining, count, first, last, depth, parent
+```
+
+## Blade syntax - Template inheritance
+
+```php
+// Defining A Layout
+@yield('name')
+@yield('x', 'y') - Yields the content of a section called x; defaults to y if x is not defined.
+@section('name')
+@endsection
+
+// Extending A Layout
+@extends('template')
+@section('name')
+@endsection
+
+@section('name', 'value')
+@section('name', $value)
+```
+
+## Blade syntax - including
+
+```php
+@include('view.name'])
+
+@include('view.name', ['some' => 'data'])
+
+@includeIf('view.name', ['some' => 'data'])
+
+@includeWhen($boolean, 'view.name', ['some' => 'data'])
+```
+
+## Blade syntax - Forms
+
+```php
+// csrf_token
+    {{ csrf_token() }}
+
+// CSRF Field
+	@csrf
+
+// Method Field
+	@method('PUT')
+```
+
+## Blade syntax - Rendering JSON
+
+```php
+<script>
+ 		var app = <?php echo json_encode($array); ?>;
+ </script>
+
+<script>
+ 		var app = @json($array);
+ </script>
+```
+
+## Blade syntax - multi language
+
+```php
+@lang('messages.welcome')
+```
+
+---
+
+# lecture 4 Request, Validation
+
+---
